@@ -3,6 +3,7 @@ class PersonalAssistant:
   def __init__(self, todos, birthdays, contacts):
     self.todos = todos
     self.birthdays = birthdays
+    self.contacts = contacts
 
 
   def get_contact(self, name):
