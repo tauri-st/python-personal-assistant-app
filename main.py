@@ -71,8 +71,11 @@ How can I help you?
     elif user_command == "7":
         user_input = input("Which contact would you like to pull up?")
         print(f"{assistant.get_contact(user_input)}")
+    #Add a Contact
     elif user_command == "8":
         print("Add a contact: \n")
+        for name in assistant.get_contacts():
+            print(name)
         name = input("Name of the person: ")
         job = input("Their job position: ")
         print(f"\n {assistant.add_contact(name, job)}")
