@@ -59,3 +59,10 @@ class PersonalAssistant:
     else:
       self.contacts[name] = job
       print(f"Successfully added new contact for {name}!")
+
+  def remove_contact(self, name):
+    if name in self.contacts:
+      self.contacts.pop(name)
+      print(f"{name} removed from contacts!")
+    else:
+      print("Contact not found!")
