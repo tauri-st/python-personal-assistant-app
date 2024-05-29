@@ -52,3 +52,10 @@ class PersonalAssistant:
       return self.contacts[name]
     else:
       return "No contact with that name!"
+
+  def add_contact(self, name, job):
+    if name in self.contacts:
+      print(f"{name} already in your contacts!")
+    else:
+      self.contacts[name] = job
+      print(f"Successfully added new contact for {name}!")

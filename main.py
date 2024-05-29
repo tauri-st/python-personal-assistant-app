@@ -71,6 +71,11 @@ How can I help you?
     elif user_command == "7":
         user_input = input("Which contact would you like to pull up?")
         print(f"{assistant.get_contact(user_input)}")
+    elif user_command == "8":
+        print("Add a contact: \n")
+        name = input("Name of the person: ")
+        job = input("Their job position: ")
+        print(f"\n {assistant.add_contact(name, job)}")
     
     elif user_command == "exit" or user_command == "Exit" or user_command == "EXIT":
         done = True
