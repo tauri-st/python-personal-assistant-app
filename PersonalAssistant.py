@@ -11,7 +11,8 @@ class PersonalAssistant:
         return self.contacts[name]
     else:
         return "No contact with that name!"
-    
+
+  #To-do methods
   def add_todo(self, new_item):
     self.todos.append(new_item)
 
@@ -28,6 +29,7 @@ class PersonalAssistant:
   def get_todos(self):
       return self.todos
 
+#Birthday methods
   def get_birthdays(self):
       return self.birthdays
 
