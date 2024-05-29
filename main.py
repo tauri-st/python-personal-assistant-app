@@ -25,6 +25,10 @@ How can I help you?
     4: Get a birthday
     5: Add a birthday
     6: Remove a birthday
+    **** Contacts *****
+    7: Get a single contact
+    8: Add a contact
+    9: Remove a contact
 
     Select a number or type 'Exit' to quit: 
     
