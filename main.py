@@ -84,6 +84,7 @@ How can I help you?
         name = input("Name of the person: ")
         job = input("Their job position: ")
         print(f"\n {assistant.add_contact(name, job)}")
+    #Remove a Contact
     elif user_command == "9":
         print("Remove a contact: \n")
         print("Your contacts: \n")
