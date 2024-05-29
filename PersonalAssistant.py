@@ -1,6 +1,6 @@
 class PersonalAssistant:
 
-  def __init__(self, todos, birthdays):
+  def __init__(self, todos, birthdays, contacts):
     self.todos = todos
     self.birthdays = birthdays
 

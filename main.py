@@ -8,7 +8,7 @@ with open("todo.json", "r") as todos, open("birthdays.json", "r") as birthdays, 
     birthday_list = json.load(birthdays)
     contact_list = json.load(contacts)
     
-    assistant = PersonalAssistant(todo_list, birthday_list)
+    assistant = PersonalAssistant(todo_list, birthday_list, contact_list)
 
 done = False
 
