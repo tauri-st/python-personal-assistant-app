@@ -3,11 +3,12 @@ import json
 from PersonalAssistant import PersonalAssistant
 
 #ADD CODE: open JSON file and pass data to PersonalAssistant class
-with open("todo.json", "r") as todos, open("birthdays.json", "r") as birthdays:
+with open("todo.json", "r") as todos, open("birthdays.json", "r") as birthdays, open("contacts.json", "r") as contacts:
     todo_list = json.load(todos)
     birthday_list = json.load(birthdays)
+    contact_list = json.load(contacts)
     
-    assistant = PersonalAssistant(todo_list, birthday_list)
+    assistant = PersonalAssistant(todo_list, birthday_list, contact_list)
 
 done = False
 
@@ -24,6 +25,10 @@ How can I help you?
     4: Get a birthday
     5: Add a birthday
     6: Remove a birthday
+    **** Contacts *****
+    7: View a contact
+    8: Add a contact
+    9: Remove a contact
 
     Select a number or type 'Exit' to quit: 
     
@@ -62,6 +67,32 @@ How can I help you?
             print(name)
         user_input = input("Who's birthday would you like to remove?")
         print(f"\n {assistant.remove_birthday(user_input)}")
+    # Get a Single Contact
+    elif user_command == "7":
+        print("View a Contact: \n")
+        print("Your contacts: \n")
+        for name in assistant.get_contacts():
+            print(name)
+        user_input = input("Which contact would you like to pull up?")
+        print(f"{assistant.get_contact(user_input)}")
+    #Add a Contact
+    elif user_command == "8":
+        print("Add a contact: \n")
+        print("Your contacts: \n")
+        for name in assistant.get_contacts():
+            print(name)
+        name = input("Name of the person: ")
+        job = input("Their job position: ")
+        print(f"\n {assistant.add_contact(name, job)}")
+    #Remove a Contact
+    elif user_command == "9":
+        print("Remove a contact: \n")
+        print("Your contacts: \n")
+        for name in assistant.get_contacts():
+            print(name)
+        user_input = input("Which contact would you like to remove?")
+        print(f"\n {assistant.remove_contact(user_input)}")
+    
     elif user_command == "exit" or user_command == "Exit" or user_command == "EXIT":
         done = True
         print("\nGoodbye, see you soon!")
@@ -69,6 +100,7 @@ How can I help you?
         print("\nNot a valid command.")
 
 # ADD CODE: write data to JSON file
-with open("todo.json", "w") as write_todos, open("birthdays.json", "w") as write_birthdays:
+with open("todo.json", "w") as write_todos, open("birthdays.json", "w") as write_birthdays, open("contacts.json", "w") as write_contacts:
     json.dump(assistant.get_todos(), write_todos)
     json.dump(assistant.get_birthdays(), write_birthdays)
+    json.dump(assistant.get_contacts(), write_contacts)
