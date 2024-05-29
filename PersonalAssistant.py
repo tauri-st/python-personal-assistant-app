@@ -5,14 +5,7 @@ class PersonalAssistant:
     self.birthdays = birthdays
     self.contacts = contacts
 
-
-  def get_contact(self, name):
-    if name in self.contacts:
-        return self.contacts[name]
-    else:
-        return "No contact with that name!"
-
-  #To-do methods
+#To-do methods
   def add_todo(self, new_item):
     self.todos.append(new_item)
 
@@ -52,3 +45,10 @@ class PersonalAssistant:
         print(f"{name}'s birthday removed!")
       else:
         print("Birthday not found!")
+
+#Contact methods
+def get_contact(self, name):
+  if name in self.contacts:
+      return self.contacts[name]
+  else:
+      return "No contact with that name!"
