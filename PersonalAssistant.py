@@ -47,6 +47,9 @@ class PersonalAssistant:
         print("Birthday not found!")
 
 #Contact methods
+  def get_contacts(self):
+    return self.contacts
+  
   def get_contact(self, name):
     if name in self.contacts:
       return self.contacts[name]
