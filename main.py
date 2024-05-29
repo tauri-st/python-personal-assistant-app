@@ -26,7 +26,7 @@ How can I help you?
     5: Add a birthday
     6: Remove a birthday
     **** Contacts *****
-    7: Get a single contact
+    7: View a contact
     8: Add a contact
     9: Remove a contact
 
@@ -69,11 +69,16 @@ How can I help you?
         print(f"\n {assistant.remove_birthday(user_input)}")
     # Get a Single Contact
     elif user_command == "7":
+        print("View a Contact: \n")
+        print("Your contacts: \n")
+        for name in assistant.get_contacts():
+            print(name)
         user_input = input("Which contact would you like to pull up?")
         print(f"{assistant.get_contact(user_input)}")
     #Add a Contact
     elif user_command == "8":
         print("Add a contact: \n")
+        print("Your contacts: \n")
         for name in assistant.get_contacts():
             print(name)
         name = input("Name of the person: ")
@@ -81,6 +86,7 @@ How can I help you?
         print(f"\n {assistant.add_contact(name, job)}")
     elif user_command == "9":
         print("Remove a contact: \n")
+        print("Your contacts: \n")
         for name in assistant.get_contacts():
             print(name)
         user_input = input("Which contact would you like to remove?")
