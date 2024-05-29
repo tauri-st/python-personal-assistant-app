@@ -67,6 +67,11 @@ How can I help you?
             print(name)
         user_input = input("Who's birthday would you like to remove?")
         print(f"\n {assistant.remove_birthday(user_input)}")
+    # Get a Single Contact
+    elif user_command == "7":
+        user_input = input("Which contact would you like to pull up?")
+        print(f"{assistant.get_contact(user_input)}")
+    
     elif user_command == "exit" or user_command == "Exit" or user_command == "EXIT":
         done = True
         print("\nGoodbye, see you soon!")
