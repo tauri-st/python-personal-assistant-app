@@ -100,6 +100,7 @@ How can I help you?
         print("\nNot a valid command.")
 
 # ADD CODE: write data to JSON file
-with open("todo.json", "w") as write_todos, open("birthdays.json", "w") as write_birthdays:
+with open("todo.json", "w") as write_todos, open("birthdays.json", "w") as write_birthdays, open("contacts.json", "w") as write_contacts:
     json.dump(assistant.get_todos(), write_todos)
     json.dump(assistant.get_birthdays(), write_birthdays)
+    json.dump(assistant.get_contacts(), write_contacts)
