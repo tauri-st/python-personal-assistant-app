@@ -3,9 +3,10 @@ import json
 from PersonalAssistant import PersonalAssistant
 
 #ADD CODE: open JSON file and pass data to PersonalAssistant class
-with open("todo.json", "r") as todos, open("birthdays.json", "r") as birthdays:
+with open("todo.json", "r") as todos, open("birthdays.json", "r") as birthdays, open("contacts.json", "r" as contacts):
     todo_list = json.load(todos)
     birthday_list = json.load(birthdays)
+    contact_list = json.load(contacts)
     
     assistant = PersonalAssistant(todo_list, birthday_list)
 
